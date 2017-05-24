@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Дорофеев](https://up.htmlacademy.ru/adaptive/11/user/299055).
-* Наставник: `Неизвестно`.
+* Наставник: [Стаc Расчинкин](https://htmlacademy.ru/profile/id210318).
 
 ---
 
