@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог магазина Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="img/logo.png" alt="Логотип магазина Мишка">
+      </div>
+      <nav class="main-nav">
+        <span class="main-nav_toggler"><span></span></span>
+      </nav>
+    </header>
+    <div class="page-form"> 
+      <h1>Вязание на заказ</h1>
+      <p class="page-form_text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+      	<h3 class="form_title">Тип</h3>
+      	<ul class="form_type">
+      	  <li class="form_type_item">
+      	  	<input type="radio" name="type" id="interior-accessories" value="interior-accessories" checked>
+      	  	<label for="interior-accessories">Аксессуар для интерьера</label>
+      	  </li>
+      	  <li class="form_type_item">
+      	  	<input type="radio" name="type" id="children-toy" value="children-toy">
+      	  	<label for="children-toy">Детская игрушка</label>
+      	  </li>	
+      	</ul>
+      	<h3 class="form_title">Цвет</h3>
+      	<ul class="form_color">
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="white" id="white">
+      	  	<label for="white">Белый</label>
+      	  </li>
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="grey" id="grey">
+      	  	<label for="grey">Серый</label>
+      	  </li>
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="tiffani" id="tiffani">
+      	  	<label for="tiffani">«Тиффани»</label>
+      	  </li>
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="black" id="black">
+      	  	<label for="black">Черный</label>
+      	  </li>
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="pink" id="pink">
+      	  	<label for="pink">Розовый</label>
+      	  </li>
+      	  <li class="form_color_item">
+      	  	<input type="checkbox" name="orange" id="orange">
+      	  	<label for="orange">Оранжевый</label>
+      	  </li>	
+      	</ul>
+      	<h3 class="form_title">ФИО</h3>
+      	<ul class="form_full-name">
+      	  <li class="form_full-name_item">
+      	  	<input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+      	  	<label for="name">Имя:</label>
+      	  </li>
+      	  <li class="form_full-name_item">
+      	  	<input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+      	  	<label for="surname">Фамилия:</label>
+      	  </li>
+      	  <li class="form_full-name_item">
+      	  	<input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+      	  	<label for="patronymic">Имя:</label>
+      	  </li>	
+      	</ul>
+      	<h3 class="form_title">Тел</h3>
+      	<input class="form_tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+      	<h3 class="form_title">e-mail</h3>
+      	<input class="form_email" type="email" name="email" placeholder="Ваш Email*" required>
+      	<h3 class="form_add">Доп</h3>
+      	<textarea class="form_add-item" name="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      	<span class="form_required">*Поля обязательны для заполнения</span>
+      	<button class="form_submit" type="submit">Отправить заказ</button>	
+      </form>		
+    </div>
+    <footer class="page-footer">
+      <section class="page-footer_social">
+        <a class="page-footer_social-link social-link-inst" href="#">Инстаграм</a>
+        <a class="page-footer_social-link social-link-facebook" href="#">Фейсбук</a>
+        <a class="page-footer_social-link social-link-twitter" href="#">Твиттер</a>
+      </section>
+      <section class="page-footer_copyright">
+        <span>Разработано<a class="page-footer_logo" href="#"></a></span>
+      </section>	
+    </footer>  
+  </body>
+</html>
