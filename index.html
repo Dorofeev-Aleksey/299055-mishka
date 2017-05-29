@@ -7,101 +7,134 @@
   <body>
     <header class="page-header">
       <div class="page-header__logo">
-    	  <img src="img/logo.png" alt="Логотип магазина Мишка">
+    	  <img src="img/logo.png" alt="Магазина Мишка">
       </div>
       <nav class="main-nav">
-        <span class="main-nav_toggler"><span></span></span>
+        <span class="main-nav__toggler"><span></span></span>
       </nav>
+      <div class="page-header__popup-menu">
+        <ul class="page-header__popup-list">
+          <li class="page-header__popup-item">
+          	<a class="page-header__popup-link" href="#">Каталог товаров</a>
+          </li>
+          <li class="page-header__popup-item">
+          	<a class="page-header__popup-link" href="#">Вязание на заказ</a>
+          </li>	
+          <li class="page-header__popup-item">
+          	<a class="page-header__popup-link" href="#">Поиск по сайту</a>
+          </li>	
+          <li class="page-header__popup-item">
+          	<a class="page-header__popup-link" href="#">Корзина: <span class="pahe-header__popup-basket">пока пуста</span></a>
+          </li>		
+        </ul>	
+      </div>
     </header>
     <div class="page-promo">
       <h1>Милые штуки ручной работы для дома</h1>
-      <div class="page-promo__catalog-item">
+      <div class="page-promo__catalog-item page-promo__catalog-item--bg1">
       	<p>Предметы интерьера</p>
       </div>
-      <div class="page-promo__catalog-item">
+      <div class="page-promo__catalog-item page-promo__catalog-item--bg2">
       	<p>Детские игрушки</p>
       </div>
     </div>
     <article class="product-week">
       <h2>Вязаные корзинки</h2>
-      <span class="product-week_time-product">Товар недели</span>
+      <span class="product-week__time-product">Товар недели</span>
       <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
       <table class="product-week__features-table">
-      	<tr class="product-week_row">
-      	  <td class="product-week_cell">Цвет:</td>
-      	  <td class="product-week_cell">«Тиффани»/серый</td>	
+      	<tr class="product-week__row">
+      	  <td class="product-week__cell">Цвет:</td>
+      	  <td class="product-week__cell">«Тиффани»/серый</td>	
       	</tr>
-      	<tr class="product-week_row">
-      	  <td class="product-week_cell">Диаметр:</td>
-      	  <td class="product-week_cell">25 см</td>	
+      	<tr class="product-week__row">
+      	  <td class="product-week__cell">Диаметр:</td>
+      	  <td class="product-week__cell">25 см</td>	
       	</tr>
-      	<tr class="product-week_row">
-      	  <td class="product-week_cell">Высота:</td>
-      	  <td class="product-week_cell">15 см</td>	
+      	<tr class="product-week__row">
+      	  <td class="product-week__cell">Высота:</td>
+      	  <td class="product-week__cell">15 см</td>	
       	</tr>
       </table>
-      <div class="product-week_photo">
-      	<img src="img/product-1.png" alt="Фото вязаных корзинок">
+      <div class="product-week__photo">
+      	<img src="img/product-1.png" alt="Вязаные корзинок">
       </div>
-      <span class="product-week_price">Цена: 990 руб.</span>
-      <a class="product-week_order btn" href="#">Заказать</a>  
+      <span class="product-week__price">Цена: 990 руб.</span>
+      <a class="btn btn--product-week" href="#">Заказать</a>  
     </article>
     <div class="about-us">
       <h2>Коротко о нас:</h2>
-      <ul class="about-us_list">
-      	<li class="about-us_item">
+      <ul class="about-us__list">
+      	<li class="about-us__item">
       	  <span>Экологически чистые материалы</span>	
       	</li>
-      	<li class="about-us_item">
+      	<li class="about-us__item">
       	  <span>Скандинавский стиль по российской цене</span>	
       	</li>
-      	<li class="about-us_item">
+      	<li class="about-us__item">
       	  <span>Увеличивает лайки на фотографиях</span>	
       	</li>
-      	<li class="about-us_item">
+      	<li class="about-us__item">
       	  <span>Связано вручную с любовью и умилением</span>	
       	</li>
-      	<li class="about-us_item">
+      	<li class="about-us__item">
       	  <span>Поддержка отечественного производителя</span>	
       	</li>
-      	<li class="about-us_item">
+      	<li class="about-us__item">
       	  <span>Поставляется в подарочной упаковке</span>	
       	</li>
       </ul>	
     </div>
     <div class="reviews">
       <h2>Отзывы</h2>
-      <p class="reviews_text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-      <span class="reviews_name-writer">Анастасия Красильникова</span>
-      <span class="riviews_email-writer">@misssssiskras</span>
-      <div class="reviews_prev"></div>
-      <div class="reviews_next"></div>
-      <a class="reviews_write btn" href="#">Написать</a>	
+      <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <span class="reviews__name-writer">Анастасия Красильникова</span>
+      <span class="riviews__email-writer">@misssssiskras</span>
+      <div class="reviews__prev"></div>
+      <div class="reviews__next"></div>
+      <a class="btn btn--reviews" href="#">Написать</a>	
     </div>
     <div class="contacts">
       <h2>Контакты</h2>
-      <table class="contacts_table-contact">
-        <tr class="contacts_row">
-      	  <td class="contacts_cell">e-mail:</td>
-      	  <td class="contacts_cell">info@mimimishkashop.ru</td>	
-      	</tr>
-      	<tr class="contacts_row">
-      	  <td class="contacts_cell">адрес:</td>
-      	  <td class="contacts_cell">г. Санкт-Петербург, ул. Большая Конюшенная, </td>	
-      	</tr>
-      </table>	
-      <button class="contacts_js-open-map"></button>
-      <a class="contants_write btn" href="#">Напишите нам</a>
+      <div class="contacts__email-box">
+      	<span class="contacts__email-subtitle">e-mail</span>
+      	<p class="contacts__email">info@mimimishkashop.ru</p>
+      </div>
+      <div class="contacts__address-box">
+      	<span class="contacts_address-subtitle">адрес:</span>
+      	<p class="contacts_address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+      </div>
+      <button class="contacts__js-open-map"></button>
+      <a class="btn btn--contants" href="#">Напишите нам</a>
     </div>
     <footer class="page-footer">
-      <section class="page-footer_social">
-      	<a class="page-footer_social-link social-link-inst" href="#">Инстаграм</a>
-      	<a class="page-footer_social-link social-link-facebook" href="#">Фейсбук</a>
-      	<a class="page-footer_social-link social-link-twitter" href="#">Твиттер</a>
+      <section class="page-footer__social">
+      	<a class="page-footer__social-link page-footer__social-link--inst" href="#">Инстаграм</a>
+      	<a class="page-footer__social-link page-footer__social-link--facebook" href="#">Фейсбук</a>
+      	<a class="page-footer__social-link page-footer__social-link--twitter" href="#">Твиттер</a>
       </section>
-      <section class="page-footer_copyright">
-      	<span>Разработано<a class="page-footer_logo" href="#"></a></span>
+      <section class="page-footer__copyright">
+      	<span>Разработано<a class="page-footer__logo" href="#"></a></span>
       </section>	
     </footer>
+    <form class="popup-order">
+      <h2 class="popup-order__title">Добавить в корзину</h2>
+      <span class="popup-order__subtitle">Выбирите размер:</span>
+      <div class="popup-order__size">
+      	<li class="popup-order__item">
+          <input type="radio" name="size" value="size-s" id="size-s" checked>
+          <label for="size-s">Размер S</label>
+        </li>
+        <li class="popup-order__item">
+          <input type="radio" name="size" value="size-m" id="size-m">
+          <label for="size-m">Размер M</label>
+        </li>
+        <li class="popup-order__item">
+          <input type="radio" name="size" value="size-l" id="size-l">
+          <label for="size-l">Размер L</label>
+        </li>
+      </div>
+      <button class="popup-order__submit" type="submit">Отправить заказ</button>
+    </form>
   </body>
 </html>
