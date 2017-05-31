@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог магазина Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="img/logo.png" alt="Магазина Мишка">
+      </div>
+      <nav class="main-nav">
+        <span class="main-nav__toggler"><span></span></span>
+      </nav>
+      <div class="page-header__popup-menu">
+        <ul class="page-header__popup-list">
+          <li class="page-header__popup-item">
+            <a class="page-header__popup-link" href="#">Каталог товаров</a>
+          </li>
+          <li class="page-header__popup-item">
+            <a class="page-header__popup-link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="page-header__popup-item">
+            <a class="page-header__popup-link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="page-header__popup-item">
+            <a class="page-header__popup-link" href="#">Корзина: <span class="pahe-header__popup-basket">пока пуста</span></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="page-catalog">
+      <h1>Каталог товаров</h1>
+      <article class="card">
+        <div class="card__photo">
+          <img src="img/photo1" alt="">
+        </div>
+        <span class="card__name">Зайчик-попрыгайчик</span>
+        <p class="card__description">Рост 30 см, вес 200 г</p>
+        <a class="card__order" href="#">1 200 руб.</a>
+      </article>
+      <article class="card">
+        <div class="card__photo">
+          <img src="img/photo1" alt="">
+        </div>
+        <span class="card__name">Корзинка для белья</span>
+        <p class="card__description">Диаметр 15 см, высота 10 см</p>
+        <a class="card__order" href="#">690 руб.</a>
+      </article>
+      <article class="card">
+        <div class="card__photo">
+          <img src="img/photo1" alt="">
+        </div>
+        <span class="card__name">Большая корзинка для игрушек</span>
+        <p class="card__description">Диаметр 30 см, высота 30 см</p>
+        <a class="card__order" href="#">1 500 руб.</a>
+      </article>
+    </div>
+    <div class="production">
+      <h2>Процесс производства</h2>
+      <div class="production__video">
+        <button class="production__js-video-btn"></button>
+      </div>
+      <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a class="btn btn--production-order" href="#">Сделать заказ</a>
+    </div>
+    <footer class="page-footer">
+      <section class="page-footer__social">
+        <a class="page-footer__social-link page-footer__social-link--inst" href="#">Инстаграм</a>
+        <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Фейсбук</a>
+        <a class="page-footer__social-link page-footer__social-link--twitter" href="#">Твиттер</a>
+      </section>
+      <section class="page-footer_copyright">
+        <span>Разработано<a class="page-footer__logo" href="#"></a></span>
+      </section>
+    </footer>
+    <form class="popup-order">
+      <h2 class="popup-order__title">Добавить в корзину</h2>
+      <span class="popup-order__subtitle">Выбирите размер:</span>
+      <div class="popup-order__size">
+        <ul class="popup-order_list">
+          <li class="popup-order__item">
+            <input type="radio" name="size" value="size-s" id="size-s" checked>
+            <label for="size-s">Размер S</label>
+          </li>
+          <li class="popup-order__item">
+            <input type="radio" name="size" value="size-m" id="size-m">
+            <label for="size-m">Размер M</label>
+          </li>
+          <li class="popup-order__item">
+            <input type="radio" name="size" value="size-l" id="size-l">
+            <label for="size-l">Размер L</label>
+          </li>
+        </ul>
+      </div>
+      <button class="popup-order__submit" type="submit">Отправить заказ</button>
+    </form>
+  </body>
+</html>
