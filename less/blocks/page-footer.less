@@ -1,9 +1,21 @@
 .page-footer {
   background-color: #f1f1f1;
+  &__wrapper {
+    .container();
+    min-height: 160px;
+  }
   &__subtitle {
     font-size: 19px;
     line-height: 19px;
     color: black;
     font-weight: bold;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .page-footer {
+    &__wrapper {
+      min-height: 143px;
+    }
   }
 }

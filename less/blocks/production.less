@@ -1,0 +1,35 @@
+.production {
+  width: 100%;
+  min-height: 503px;
+  &__wrapper-center {
+    .container();
+  }
+  &__title {
+    font-size: 17px;
+    line-height: 24px;
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .production {
+    min-height: 745px;
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .production {
+    min-height: 462px;
+  }
+}

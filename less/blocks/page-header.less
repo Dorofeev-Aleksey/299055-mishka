@@ -1,5 +1,24 @@
 .page-header {
+  margin: 0 auto;
+  min-height: 79px;
+  width: 260px;
+  position: relative;
+  &__logo {
+    text-align: center;
+  }
+  &__toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    z-index: 2;
+    display: block;
+  }
   &__popup-list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
   &__popup-link {
@@ -10,3 +29,24 @@
     text-decoration: none;
   }
 }
+
+@media (min-width: @tablet-widths) {
+  .page-header {
+    min-height: 88px;
+    width: 668px;
+    &__main-nav {
+      display: none;
+      outline: 1px solid black;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .page-header {
+    width: 1050px;
+    &__main-nav {
+      display: none;
+    }
+  }
+}
+

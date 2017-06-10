@@ -1,11 +1,19 @@
 .form {
+  width: 100%;
   &__title {
+    width: 100%;
+    height: 102px;
+    padding-top: 75px;
     font-size: 27px;
     line-height: 30px;
     color: black;
     font-weight: bold;
+    text-align: center;
+    background-color: #f1f1f1;
   }
-
+  &__wrapper-center {
+    .container();
+  }
   &__text {
     font-size: 13px;
     line-height: 24px;
@@ -41,5 +49,57 @@
     line-height: 16px;
     color: @grey;
     font-weight: normal;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .form {
+    &__title {
+      width: 100%;
+      height: 124px;
+      padding-top: 102px;
+      font-size: 43px;
+      line-height: 50px;
+    }
+    &__wrapper-color {
+      width: 100%;
+      background-color: #f1f1f1;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+    }
+    &__type-item label {
+      font-size: 19px;
+      line-height: 19px;
+    }
+    &__color-item label {
+      font-size: 19px;
+      line-height: 19px;
+    }
+    &__full-name-item label {
+      font-size: 19px;
+      line-height: 19px;
+    }
+    &__required {
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .form {
+    &__title {
+      width: 100%;
+      height: 153px;
+      padding-top: 102px;
+      font-size: 53px;
+      line-height: 57px;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+    }
   }
 }

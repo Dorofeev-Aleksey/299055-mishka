@@ -1,4 +1,5 @@
 .about-us {
+  .container();
   &__title {
     font-size: 25px;
     line-height: 30px;
@@ -10,5 +11,40 @@
     line-height: 20px;
     color: black;
     font-weight: bold;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .about-us {
+    &__title {
+    font-size: 43px;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+    }
+    &__item span {
+    font-size: 20px;
+    line-height: 22px;
+    color: black;
+    font-weight: bold;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-widths) {
+  about-us {
+    &__title {
+    font-size: 53px;
+    line-height: 57px;
+    color: black;
+    font-weight: bold;
+    }
+    &__item span {
+    font-size: 20px;
+    line-height: 22px;
+    color: black;
+    font-weight: bold;
+    }
   }
 }

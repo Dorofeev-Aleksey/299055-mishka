@@ -1,5 +1,6 @@
 .product-week {
   min-height: 820px;
+  .container();
   &__title {
     font-size: 25px;
     line-height: 30px;
@@ -11,6 +12,7 @@
     line-height: 20px;
     font-weight: bold;
     color: #63d1bb;
+    text-transform: uppercase;
   }
   &__text {
     font-size: 15px;
@@ -32,5 +34,41 @@
     line-height: 24px;
     font-weight: bold;
     color: @grey;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .product-week {
+    min-height: 522px;
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+    }
+    &__price {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .product-week {
+    min-height: 792px;
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+    }
+    &__price {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

@@ -1,5 +1,6 @@
 .reviews {
   min-height: 345px;
+  .container();
   &__title {
     font-size: 25px;
     line-height: 30px;
@@ -26,5 +27,51 @@
   }
   &__next {
     margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .reviews {
+    &__title {
+    font-size: 43px;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+    }
+    &__text {
+    font-size: 17px;
+    line-height: 30px;
+    color: @grey;
+    font-weight: normal;
+    }
+    &__name-writer {
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .reviews {
+    &__title {
+    font-size: 53px;
+    line-height: 57px;
+    color: black;
+    font-weight: bold;
+    }
+    &__text {
+    font-size: 17px;
+    line-height: 30px;
+    color: @grey;
+    font-weight: normal;
+    }
+    &__name-writer {
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    font-weight: bold;
+    }
   }
 }
