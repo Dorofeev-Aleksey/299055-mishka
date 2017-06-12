@@ -10,25 +10,28 @@
       <div class="page-header__logo">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазина Мишка">
       </div>
-      <nav class="pahe-header__main-nav">
-        <span class="pahe-header__toggler"><span></span></span>
-      </nav>
-      <div class="page-header__popup-menu">
+      <div class="page-header__main-nav">
+        <button class="page-header__toggler page-header__toggler--closed" type="button">Открыть меню</button>
+      </div>
+      <nav class="page-header__popup-menu">
         <ul class="page-header__popup-list">
-          <li class="page-header__popup-item">
+          <li class="page-header__popup-item page-header__popup-item-wrest1">
             <a class="page-header__popup-link" href="#">Каталог товаров</a>
           </li>
-          <li class="page-header__popup-item">
+          <li class="page-header__popup-item page-header__popup-item-wrest2">
             <a class="page-header__popup-link" href="#">Вязание на заказ</a>
           </li>
           <li class="page-header__popup-item">
             <a class="page-header__popup-link" href="#">Поиск по сайту</a>
           </li>
           <li class="page-header__popup-item">
-            <a class="page-header__popup-link" href="#">Корзина: <span class="pahe-header__popup-basket">пока пуста</span></a>
+            <a class="page-header__popup-link" href="#">Корзина: <span class="page-header__popup-basket">пока пуста</span></a>
           </li>
         </ul>
-      </div>
+      </nav>
+      <a href="#" class="page-header__delivery">Бесплатная доставка по России</a>
+      <a href="#" class="page-header__news">Новые поступления</a>
+      <a href="#" class="page-header__sale">Распродажа</a>
     </header>
     <div class="page-catalog">
       <h1 class="page-catalog__title">Каталог товаров</h1>
@@ -37,31 +40,37 @@
           <div class="page-catalog__photo">
             <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
           </div>
-          <span class="page-catalog__name">Зайчик-попрыгайчик</span>
-          <p class="page-catalog__description">Рост 30 см, вес 200 г</p>
-          <a class="page-catalog__order" href="#">1 200 руб.</a>
+          <div class="page-catalog__wrapper-info">
+            <span class="page-catalog__name">Зайчик-попрыгайчик</span>
+            <p class="page-catalog__description">Рост 30 см, вес 200 г</p>
+            <a class="page-catalog__order" href="#">1 200 руб.</a>
+          </div>
         </article>
         <article class="page-catalog__card">
           <div class="page-catalog__photo">
             <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
           </div>
-          <span class="page-catalog__name">Корзинка для белья</span>
-          <p class="page-catalog__description">Диаметр 15 см, высота 10 см</p>
-          <a class="page-catalog__order" href="#">690 руб.</a>
+          <div class="page-catalog__wrapper-info">
+            <span class="page-catalog__name">Корзинка для белья</span>
+            <p class="page-catalog__description">Диаметр 15 см, высота 10 см</p>
+            <a class="page-catalog__order" href="#">690 руб.</a>
+          </div>
         </article>
         <article class="page-catalog__card">
           <div class="page-catalog__photo">
             <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
           </div>
-          <span class="page-catalog__name">Большая корзинка для игрушек</span>
-          <p class="page-catalog__description">Диаметр 30 см, высота 30 см</p>
-          <a class="page-catalog__order" href="#">1 500 руб.</a>
+          <div class="page-catalog__wrapper-info">
+            <span class="page-catalog__name">Большая корзинка для игрушек</span>
+            <p class="page-catalog__description">Диаметр 30 см, высота 30 см</p>
+            <a class="page-catalog__order" href="#">1 500 руб.</a>
+          </div>
         </article>
       </div>
     </div>
     <div class="production">
       <div class="production__wrapper-center">
-        <h2>Процесс производства</h2>
+        <h2 class="production__title">Процесс производства</h2>
         <div class="production__video">
           <button class="production__js-video-btn"></button>
         </div>
@@ -70,14 +79,20 @@
       </div>
     </div>
     <footer class="page-footer">
-      <section class="page-footer__social">
-        <a class="page-footer__social-link page-footer__social-link--inst" href="#">Инстаграм</a>
-        <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Фейсбук</a>
-        <a class="page-footer__social-link page-footer__social-link--twitter" href="#">Твиттер</a>
-      </section>
-      <section class="page-footer_copyright">
-        <span>Разработано<a class="page-footer__logo" href="#"></a></span>
-      </section>
+      <div class="page-footer__wrapper">
+        <section class="page-footer__logo">
+          <img src="img/logo-footer.png" width="105" height="35" alt="Магазина Мишка">
+        </section>
+        <section class="page-footer__social">
+          <a class="page-footer__social-link page-footer__social-link--inst" href="#">Инстаграм</a>
+          <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Фейсбук</a>
+          <a class="page-footer__social-link page-footer__social-link--twitter" href="#">Твиттер</a>
+        </section>
+        <section class="page-footer__copyright">
+          <span class="page-footer__subtitle">Разработано</span>
+          <a class="page-footer__logo-html" href="#">HTML academy</a>
+        </section>
+      </div>
     </footer>
     <form class="popup-order">
       <h2 class="popup-order__title">Добавить в корзину</h2>

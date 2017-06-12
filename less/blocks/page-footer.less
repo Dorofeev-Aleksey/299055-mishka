@@ -2,20 +2,113 @@
   background-color: #f1f1f1;
   &__wrapper {
     .container();
-    min-height: 160px;
+    height: 160px;
+  }
+  &__social {
+    height: 80px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &__logo {
+    display: none;
+  }
+  &__social-link {
+    font-size: 0;
+    position: relative;
+  }
+  &__social-link--inst::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background-image: url(../img/icon-insta.svg);
+    background-repeat: no-repeat;
+    top: 20px;
+    left: 75px;
+  }
+  &__social-link--twitter::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background-image: url(../img/icon-fb.svg);
+    background-repeat: no-repeat;
+    top: 20px;
+    left: 120px;
+  }
+  &__social-link--facebook::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background-image: url(../img/icon-twitter.svg);
+    background-repeat: no-repeat;
+    top: 20px;
+    left: 170px;
   }
   &__subtitle {
+    display: block;
     font-size: 19px;
     line-height: 19px;
     color: black;
     font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 28px;
+    margin-left: -13px;
+  }
+  &__copyright {
+    height: 80px;
+  }
+  &__logo-html {
+    font-size: 0;
+    position: relative;
+  }
+  &__logo-html::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    right: -230px;
+    top: -40px;
+    background-image: url(../img/logo-htmlacademy.png);
+    background-repeat: no-repeat;
   }
 }
 
 @media (min-width: @tablet-widths) {
   .page-footer {
     &__wrapper {
-      min-height: 143px;
+      width: 668px;
+      height: 143px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__logo {
+      display: block;
+    }
+    &__social {
+      border: none;
+      width: 170px;
+    }
+    &__copyright {
+      height: 35px;
+      padding-right: 40px;
+    }
+    &__subtitle {
+      margin: 0px;
+    }
+    &__logo-html::after {
+      right: -170px;
+      top: -40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .page-footer {
+    &__wrapper {
+      width: 1050px;
     }
   }
 }

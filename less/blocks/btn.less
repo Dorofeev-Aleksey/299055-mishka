@@ -7,4 +7,85 @@
   padding: 15px 50px;
   text-decoration: none;
   text-transform: uppercase;
+  &--product-week {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  &--reviews {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  &--contants {
+    display: block;
+    width: 160px;
+    margin: 20px auto;
+  }
+  &--production-order {
+    padding-right: 21px;
+    padding-left: 21px;
+    margin-left: 34px;
+  }
+  &--form {
+    background-color: white;
+    width: 268px;
+    padding-right: 44px;
+    padding-left: 44px;
+    margin-bottom: 55px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .btn {
+    &--product-week {
+      padding-right: 95px;
+      padding-left: 95px;
+    }
+    &--reviews {
+      position: absolute;
+      right: 50px;
+      top: 70px;
+      padding-right: 37px;
+      padding-left: 37px;
+    }
+    &--production-order {
+      width: 150px;
+      padding-right: 218px;
+      padding-left: 218px;
+      margin-left: 40px;
+    }
+    &--form {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .btn {
+    &--product-week {
+      padding-right: 97px;
+      padding-left: 97px;
+    }
+    &--reviews {
+      padding-right: 40px;
+      padding-left: 40px;
+      position: absolute;
+      right: 0;
+      top: 90px;
+    }
+    &--contants {
+      display: block;
+      width: 160px;
+      margin: 0;
+      margin-left: 0;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+    &--production-order {
+      width: 148px;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin-left: 80px;
+    }
+  }
 }

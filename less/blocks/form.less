@@ -10,6 +10,7 @@
     font-weight: bold;
     text-align: center;
     background-color: #f1f1f1;
+    margin: 0;
   }
   &__wrapper-center {
     .container();
@@ -21,28 +22,87 @@
     font-weight: normal;
   }
   &__subtitle {
+    position: relative;
     font-size: 17px;
     line-height: 17px;
     color: #63d1bb;
     font-weight: bold;
   }
+  &__subtitle::after {
+    content: "";
+    position: absolute;
+    width: 198px;
+    height: 1px;
+    right: 5px;
+    top: 10px;
+    background-color: #62d1ba;
+  }
+  &__subtitle--green-line::after {
+    width: 179px;
+  }
+  &__type {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
   &__type-item label {
+    display: inline-block;
+    vertical-align: top;
+    width: 156px;
+    font-size: 17px;
+    line-height: 18px;
+    color: black;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  &__color {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__color-item label {
+    display: inline-block;
+    vertical-align: top;
+    width: 156px;
+    margin-left: 40px;
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 18px;
     color: black;
     font-weight: bold;
   }
-  &__color-item label {
-    font-size: 17px;
-    line-height: 18px;
-    color: black;
-    font-weight: bold;
+  &__full-name {
+    list-style-type: none;
+    padding-left: 0;
   }
   &__full-name-item label {
     font-size: 17px;
     line-height: 18px;
     color: black;
     font-weight: bold;
+  }
+  &__full-name-item input {
+    width: 260px;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+  }
+  &__tel {
+    width: 260px;
+    border: none;
+    border-bottom: 2px solid black;
+  }
+  &__email {
+    width: 260px;
+    border: none;
+    border-bottom: 2px solid black;
+  }
+  &_add-item {
+    width: 260px;
+    height: 138px;
+    border: 2px solid black;
+    resize: none;
   }
   &__required {
     font-size: 14px;
@@ -65,23 +125,73 @@
       width: 100%;
       background-color: #f1f1f1;
     }
+    &__wrapper-center {
+      position: relative;
+    }
+    &__subtitle {
+      position: absolute;
+    }
+    &__subtitle::after {
+      display: none;
+    }
     &__text {
       font-size: 17px;
       line-height: 30px;
     }
+    &__type-item {
+      margin-left: 167px;
+    }
     &__type-item label {
+      width: 260px;
       font-size: 19px;
       line-height: 19px;
+    }
+    &__color {
+      display: flex;
+      flex-wrap: wrap;
+      width: 501px;
+      margin-left: 167px;
+    }
+    &__color-item {
+      width: 210px;
     }
     &__color-item label {
       font-size: 19px;
       line-height: 19px;
     }
+    &__full-name-item {
+      margin-left: 167px;
+    }
     &__full-name-item label {
       font-size: 19px;
       line-height: 19px;
     }
+    &__wrapper-center--tel-email {
+      min-height: 178px;
+      padding-top: 50px
+    }
+    &__tel {
+      display: block;
+      margin-left: 167px;
+    }
+    &__email {
+      display: block;
+      margin-left: 167px;
+      margin-top: 25px;
+    }
+    &__wrapper-center--add {
+      position: relative;
+      min-height: 297px;
+      padding-top: 50px;
+    }
+    &_add-item {
+      margin-left: 167px;
+      width: 501px;
+    }
     &__required {
+      position: absolute;
+      right: 0;
+      bottom: 40px;
       font-size: 17px;
       line-height: 30px;
     }
@@ -100,6 +210,13 @@
     &__text {
       font-size: 17px;
       line-height: 30px;
+    }
+    &__color {
+      width: 744px;
+    }
+    &_add-item {
+      margin-left: 175px;
+      width: 700px;
     }
   }
 }

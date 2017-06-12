@@ -1,12 +1,14 @@
 .page-promo {
   width: 100%;
   background-color: #f9f9f9;
+  min-height: 490px;
+  border-top: 1px solid #ececec;
   &__wrapper {
     .container();
+    height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 490px;
     padding-top: 50px;
     background-image: url(../img/hero-mobile@1x.jpg);
     background-repeat: no-repeat;
@@ -23,6 +25,8 @@
   }
   &__catalog-box {
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
   &__catalog-item {
     width: 100%;
@@ -75,16 +79,19 @@
 
 @media (min-width: @tablet-widths) {
   .page-promo {
-    min-height: 746 px;
+    min-height: 745px;
     &__wrapper {
-      background-image: url(../img/hero-mobile@1x.jpg);
+      height: 696px;
+      background-image: url(../img/hero-desktop.jpg);
       background-repeat: no-repeat;
-      background-position: center 0px;
+      background-position: -60px 0px;
     }
     &__title {
       width: 515px;
       font-size: 43px;
       line-height: 50px;
+      text-align: center;
+      margin-top: 100px;
     }
     &__br {
     display: none;
@@ -104,9 +111,10 @@
 
 @media (min-width: @desktop-widths) {
   .page-promo {
-    min-height: 746 px;
+    height: 746px;
     &__wrapper {
-      background-image: url(../img/hero-mobile@1x.jpg);
+      height: 696px;
+      background-image: url(../img/hero-desktop.jpg);
       background-repeat: no-repeat;
       background-position: center 0px;
     }

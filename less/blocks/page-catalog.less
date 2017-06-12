@@ -17,13 +17,28 @@
   &__wrapper-center {
     .container();
   }
+  &__card {
+    min-height: 350px;
+    width: 260px;
+    margin-top: 30px;
+    border: 1px solid #ededed;
+    padding-bottom: 24px;
+  }
+  &__photo {
+    margin-bottom: 25px;
+  }
   &__name {
+    width: 185px;
+    display: block;
     font-size: 17px;
     line-height: 24px;
     color: black;
     font-weight: bold;
+    margin-left: 28px;
   }
   &__description {
+    margin-left: 28px;
+    margin-bottom: 30px;
     font-size: 13px;
     line-height: 30px;
     color: @grey;
@@ -35,6 +50,8 @@
     color: black;
     font-weight: bold;
     text-decoration: none;
+    margin-left: 28px;
+    margin-bottom: 25px;
   }
 }
 
@@ -48,17 +65,44 @@
       font-size: 43px;
       line-height: 50px;
     }
+    &__card {
+      display: flex;
+      flex-direction: row;
+      min-height: 334px;
+      width: 668px;
+      margin-top: 54px;
+      border: 1px solid #ededed;
+      padding-bottom: 0;
+    }
+    &__photo {
+      width: 334px;
+      height: 334px;
+      margin-bottom: 0;
+      border-right: 1px solid #ededed;
+    }
+    &__wrapper-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 314px;
+      width: 334px;
+      padding-bottom: 20px;
+    }
     &__name {
       font-size: 20px;
       line-height: 24px;
+      width: 235px;
+      margin-top: 30px;
     }
     &__description {
       font-size: 15px;
       line-height: 30px;
+      margin-top: -90px;
     }
     &__order {
       font-size: 17px;
       line-height: 24px;
+      margin-bottom: 0;
     }
   }
 }
@@ -66,12 +110,40 @@
 @media (min-width: @desktop-widths) {
   .page-catalog {
     min-height: 660px;
+    &__wrapper-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
     &__title {
       height: 153px;
       margin-bottom: 125px;
       padding-top: 102px;
       font-size: 53px;
       line-height: 57px;
+    }
+    &__card {
+      width: 316px;
+      min-height: 659px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__photo {
+      width: 316px;
+      height: 462px;
+      outline: 1px solid black;
+    }
+    &__wrapper-info {
+      min-height: 177px;
+      width: 316px;
+      padding-bottom: 20px;
+    }
+    &__name {
+      margin-bottom: -55px;
+    }
+    &__description {
+      margin: 0;
+      margin-left: 28px;
     }
   }
 }
