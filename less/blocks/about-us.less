@@ -1,14 +1,103 @@
 .about-us {
+  .container();
+  height: 830px;
   &__title {
     font-size: 25px;
     line-height: 30px;
     color: black;
     font-weight: bold;
   }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    padding-top: 85px;
+  }
   &__item span {
     font-size: 17px;
     line-height: 20px;
     color: black;
     font-weight: bold;
+  }
+  &__item--image1 {
+    background-image: url(../img/icon-feature-1.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+  &__item--image2 {
+    background-image: url(../img/icon-feature-2.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+  &__item--image3 {
+    background-image: url(../img/icon-feature-3.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+  &__item--image4 {
+    background-image: url(../img/icon-feature-4.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+  &__item--image5 {
+    background-image: url(../img/icon-feature-5.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+  &__item--image6 {
+    background-image: url(../img/icon-feature-6.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 35px;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .about-us {
+    height: 600px;
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      color: black;
+      font-weight: bold;
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 334px;
+    }
+    &__item span {
+      font-size: 20px;
+      line-height: 22px;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-widths) {
+  .about-us {
+    height: 515px;
+    width: 700px;
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      color: black;
+      font-weight: bold;
+    }
+    &__item {
+      width: 350px;
+    }
+    &__item span {
+      font-size: 20px;
+      line-height: 22px;
+      color: black;
+      font-weight: bold;
+    }
   }
 }

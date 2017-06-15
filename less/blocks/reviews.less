@@ -1,5 +1,6 @@
 .reviews {
-  min-height: 345px;
+  height: 600px;
+  .container();
   &__title {
     font-size: 25px;
     line-height: 30px;
@@ -11,20 +12,125 @@
     line-height: 30px;
     color: @grey;
     font-weight: normal;
+    margin-bottom: 35px;
+  }
+  &__button-box {
+    width: 260px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    display: flex;
+  }
+  &__button {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 52px;
+    background-color: white;
+    border: none;
+    border: 1px solid #f4f4f4;
+  }
+  &__button--prev {
+    margin-right: -4px;
+    border-right-color: transparent;
+    background-image: url(../img/icon-left-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__button--next {
+    background-image: url(../img/icon-right-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-position: center center;
   }
   &__name-writer {
+    display: block;
     font-size: 17px;
     line-height: 24px;
     color: black;
     font-weight: bold;
   }
   &__email-writer {
+    display: block;
     font-size: 17px;
     line-height: 30px;
     color: @grey;
     font-weight: normal;
+    margin-bottom: 30px;
   }
   &__next {
     margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .reviews {
+    width: 668px;
+    padding: 0 50px;
+    height: 417px;
+    padding-top: 40px;
+    position: relative;
+    background-image: url(../img/review.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 left;
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      color: black;
+      font-weight: bold;
+    }
+    &__text {
+      width: 641px;
+      font-size: 17px;
+      line-height: 30px;
+      color: @grey;
+      font-weight: normal;
+    }
+    &__button-box {
+      width: 167px;
+      position: absolute;
+      right: 55px;
+      bottom: 40px;
+    }
+    &__button {
+      border: none;
+    }
+    &__name-writer {
+      font-size: 18px;
+      line-height: 24px;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .reviews {
+    width: 825px;
+    padding-left: 175px;
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      color: black;
+      font-weight: bold;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+      color: @grey;
+      font-weight: normal;
+    }
+    &__name-writer {
+      font-size: 18px;
+      line-height: 24px;
+      color: black;
+      font-weight: bold;
+    }
+    &__button-box {
+      width: 175px;
+      position: absolute;
+      right: 5px;
+      bottom: 35px;
+    }
   }
 }
