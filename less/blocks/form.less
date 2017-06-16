@@ -3,7 +3,8 @@
   &__title {
     width: 100%;
     height: 102px;
-    padding-top: 75px;
+    padding-top: 70px;
+    padding-bottom: 5px;
     font-size: 27px;
     line-height: 30px;
     color: black;
@@ -20,6 +21,8 @@
     line-height: 24px;
     color: @grey;
     font-weight: normal;
+    margin-top: 21px;
+    margin-bottom: 25px;
   }
   &__subtitle {
     position: relative;
@@ -27,14 +30,15 @@
     line-height: 17px;
     color: #63d1bb;
     font-weight: bold;
+    text-transform: uppercase;
   }
   &__subtitle::after {
     content: "";
     position: absolute;
     width: 198px;
     height: 1px;
-    right: 5px;
-    top: 10px;
+    right: 0px;
+    top: 8px;
     background-color: #62d1ba;
   }
   &__subtitle--green-line::after {
@@ -46,6 +50,7 @@
     list-style-type: none;
   }
   &__type-item label {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 156px;
@@ -53,28 +58,75 @@
     line-height: 18px;
     color: black;
     font-weight: bold;
-    margin-left: 40px;
-    margin-bottom: 20px;
+    margin-top: 18px;
+    margin-left: 64px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__type-item input {
+    display: none;
+  }
+  &__type-item label::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: -63px;
+    background-image: url("../img/shape-mob.png");
+    background-repeat: no-repeat;
+  }
+  &__type-item input:checked + label::before {
+    background: url("../img/shape-mob.png") no-repeat,
+                url("../img/dott-mob.png") no-repeat 12px 12px;
+  }
+  &__subtitle--color {
+    margin-top: 38px;
   }
   &__color {
     margin: 0;
+    margin-bottom: 23px;
     padding: 0;
     list-style-type: none;
   }
   &__color-item label {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 156px;
-    margin-left: 40px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 64px;
+    margin-bottom: 22px;
     font-size: 17px;
     line-height: 18px;
     color: black;
     font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__color-item label::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: -10px;
+    left: -63px;
+    border: 2px solid @grey;
+  }
+  &__color-item input:checked + label::before {
+    background-image: url(../img/icon-tick.svg);
+    background-repeat: no-repeat;
+    background-position: 8px 11px;
+    background-size: 22px 16px;
+  }
+  &__color-item input {
+    display: none;
   }
   &__full-name {
     list-style-type: none;
     padding-left: 0;
+    padding-top: 10px;
   }
   &__full-name-item label {
     font-size: 17px;
@@ -83,24 +135,34 @@
     font-weight: bold;
   }
   &__full-name-item input {
-    width: 260px;
+    width: 282px;
     border: none;
-    border-bottom: 2px solid black;
-    margin-bottom: 20px;
+    box-shadow: -10px 26px 0 -11px black;
+    margin-bottom: 36px;
+    margin-top: 10px;
+  }
+  &__full-name-item:nth-child(3) input {
+    margin-bottom: 29px;
   }
   &__tel {
-    width: 260px;
+    width: 282px;
     border: none;
-    border-bottom: 2px solid black;
+    box-shadow: -10px 26px 0 -11px black;
+    margin-bottom: 32px;
   }
   &__email {
-    width: 260px;
+    width: 282px;
     border: none;
-    border-bottom: 2px solid black;
+    box-shadow: -10px 26px 0 -11px black;
+    margin-bottom: 32px;
   }
   &_add-item {
-    width: 260px;
-    height: 138px;
+    width: 230px;
+    height: 120px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    margin-top: 7px;
     border: 2px solid black;
     resize: none;
   }
@@ -109,17 +171,33 @@
     line-height: 16px;
     color: @grey;
     font-weight: normal;
+    margin-bottom: 19px;
   }
 }
 
 @media (min-width: @tablet-widths) {
   .form {
     &__title {
+      position: relative;
       width: 100%;
       height: 124px;
-      padding-top: 102px;
+      padding-top: 95px;
       font-size: 43px;
       line-height: 50px;
+    }
+    &__title::after {
+      content: "";
+      position: absolute;
+      width: 768px;
+      height: 24px;
+      bottom: -14px;
+      left: 165px;
+      background-image: url(../img/zigzag-fill-tablet.png);
+      background-repeat: no-repeat;
+    }
+    &__wrapper-center--type {
+      min-height: 295px;
+      padding-top: 74px;
     }
     &__wrapper-color {
       width: 100%;
@@ -130,13 +208,23 @@
     }
     &__subtitle {
       position: absolute;
+      top: 190px;
+      left: 0;
     }
     &__subtitle::after {
       display: none;
     }
+    &__subtitle--color {
+      top: 30px;
+      left: 1px;
+    }
     &__text {
       font-size: 17px;
       line-height: 30px;
+      margin-top: 0;
+    }
+    &__type {
+      margin-top: 55px;
     }
     &__type-item {
       margin-left: 167px;
@@ -145,26 +233,90 @@
       width: 260px;
       font-size: 19px;
       line-height: 19px;
+      margin-left: 80px;
+      margin-bottom: 39px;
+    }
+    &__type-item label::before {
+      width: 52px;
+      height: 52px;
+      top: -15px;
+      left: -80px;
+      background-image: url("../img/shape-tablet.png");
+      background-repeat: no-repeat;
+    }
+    &__type-item input:checked + label::before {
+      background: url("../img/shape-tablet.png") no-repeat,
+                  url("../img/dott-tablet.png") no-repeat 15px 15px;
+    }
+    &__wrapper-center--color {
+      min-height: 257px;
+      padding-top: 47px;
     }
     &__color {
       display: flex;
+      flex-direction: row;
+      justufy-content: space-between;
       flex-wrap: wrap;
-      width: 501px;
-      margin-left: 167px;
+      width: 548px;
+      margin-left: 144px;
     }
     &__color-item {
       width: 210px;
+      margin-left: 40px;
+      margin-right: 11px;
+      margin-bottom: 15px;
+    }
+    &__color-item label::before {
+      width: 50px;
+      height: 48px;
+      top: -15px;
+      left: -80px;
+    }
+    &__color-item input:checked + label::before {
+      background-image: url(../img/icon-tick.svg);
+      background-repeat: no-repeat;
+      background-position: 10px 13px;
+      background-size: 33px 22px;
     }
     &__color-item label {
+      width: 120px;
       font-size: 19px;
       line-height: 19px;
     }
+    &__wrapper-center--full-name {
+      min-height: 260px;
+      padding-top: 5px;
+    }
+    &__full-name {
+        margin-top: 16px;
+    }
     &__full-name-item {
+      width: 500px;
       margin-left: 167px;
+      margin-bottom: 6px;
     }
     &__full-name-item label {
       font-size: 19px;
       line-height: 19px;
+
+    }
+    &__full-name-item:first-child input {
+      width: 420px;
+    }
+    &__full-name-item input{
+      width: 375px;
+      box-shadow: none;
+      padding-left: 20px;
+      position: relative;
+    }
+    &__full-name-item input::after{
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: black;
     }
     &__wrapper-center--tel-email {
       min-height: 178px;

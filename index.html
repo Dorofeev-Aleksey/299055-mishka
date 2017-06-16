@@ -10,8 +10,8 @@
       <div class="page-header__logo">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазина Мишка">
       </div>
-      <div class="page-header__main-nav">
-        <button class="page-header__toggler page-header__toggler--closed" type="button">Открыть меню</button>
+      <div class="page-header__main-nav page-header__main-nav--nojs page-header__main-nav--closed">
+        <button class="page-header__toggler" type="button">Открыть меню</button>
       </div>
       <nav class="page-header__popup-menu">
         <ul class="page-header__popup-list">
@@ -95,7 +95,7 @@
     </div>
     <div class="reviews">
       <h2 class="reviews__title">Отзывы</h2>
-      <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br class="reviews__br"> и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
       <span class="reviews__name-writer">Анастасия Красильникова</span>
       <span class="riviews__email-writer">@misssssiskras</span>
       <div class="reviews__button-box">
@@ -112,7 +112,7 @@
       </div>
       <div class="contacts__address-box">
         <span class="contacts__address-subtitle">адрес:</span>
-        <span class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+        <span class="contacts__address">г. Санкт-Петербург,<br class="contacts__br"> ул. Большая Конюшенная, д. 19/8, офис 101</span>
       </div>
       <button class="contacts__js-open-map"></button>
       <a class="btn btn--contants" href="#">Напишите нам</a>
@@ -154,5 +154,21 @@
       </div>
       <button class="btn btn--popup-order" type="submit">Добавить</button>
     </form>
+    <script type="text/javascript">
+      var MainNav = document.querySelector(".page-header__main-nav");
+      var Toggler = document.querySelector(".page-header__toggler");
+
+      MainNav.classList.remove("page-header__main-nav--nojs");
+
+      Toggler.addEventListener("click", function() {
+        if (MainNav.classList.contains("page-header__main-nav--opened")) {
+          MainNav.classList.remove("page-header__main-nav--opened");
+          MainNav.classList.add("page-header__main-nav--closed");
+        } else {
+          MainNav.classList.add("page-header__main-nav--opened");
+          MainNav.classList.remove("page-header__main-nav--closed");
+        }
+      })
+    </script>
   </body>
 </html>
