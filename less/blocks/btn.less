@@ -8,6 +8,13 @@
   padding: 13px 50px;
   text-decoration: none;
   text-transform: uppercase;
+  &:hover {
+    background-color: @grey;
+    color: white;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
   &--product-week {
     width: 100%;
     font-size: 17px;
@@ -40,7 +47,6 @@
     margin-top: 10px;
   }
 }
-
 @media (min-width: @tablet-widths) {
   .btn {
     &--product-week {
@@ -60,7 +66,10 @@
       margin-left: 41px;
     }
     &--form {
-      margin-top: 40px;
+      width: 230px;
+      margin-top: 48px;
+      padding: 14px 0;
+      margin-bottom: 50px;
     }
     &--contants {
       padding: 14px 33px;
@@ -90,6 +99,10 @@
       margin-left: 5px;
       padding-right: 38px;
       padding-left: 38px;
+    }
+    &--form {
+      margin-left: 176px;
+      margin-top: 44px;
     }
     &--production-order {
       width: 148px;

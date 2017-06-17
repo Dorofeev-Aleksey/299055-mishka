@@ -144,18 +144,75 @@
   &__full-name-item:nth-child(3) input {
     margin-bottom: 29px;
   }
+  &__full-name-item input:hover {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__full-name-item input:active {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__full-name-item input:focus {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+    outline: none;
+  }
+  /* плавное изменение прозрачности  placeholder-а при фокусе */
+  &__full-name-item input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  &__full-name-item input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  &__full-name-item input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  &__full-name-item input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  &__full-name-item input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  &__full-name-item input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  &__full-name-item input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  &__full-name-item input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
   &__tel {
     width: 282px;
     border: none;
     box-shadow: -10px 26px 0 -11px black;
     margin-bottom: 32px;
   }
+  &__tel:hover {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__tel:active {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__tel:focus {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+    outline: none;
+  }
+  /* плавное изменение прозрачности  placeholder-а при фокусе */
+  &__tel::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  &__tel::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  &__tel:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  &__tel:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  &__tel:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  &__tel:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  &__tel:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  &__tel:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
   &__email {
     width: 282px;
     border: none;
     box-shadow: -10px 26px 0 -11px black;
     margin-bottom: 32px;
   }
+  &__email:hover {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__email:active {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+  }
+  &__email:focus {
+    box-shadow: -10px 26px 0 -11px #62d1ba;
+    outline: none;
+  }
+  /* плавное изменение прозрачности  placeholder-а при фокусе */
+  &__email::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  &__email::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  &__email:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  &__email:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  &__email:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  &__email:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  &__email:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  &__email:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
   &_add-item {
     width: 230px;
     height: 120px;
@@ -166,6 +223,25 @@
     border: 2px solid black;
     resize: none;
   }
+  &_add-item:hover {
+    border: 2px solid #62d1ba;
+  }
+  &_add-item:active {
+    border: 2px solid #62d1ba;
+  }
+  &_add-item:focus {
+    border: 2px solid #62d1ba;
+    outline: none;
+  }
+  /* плавное изменение прозрачности  placeholder-а при фокусе */
+  &_add-item::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  &_add-item::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  &_add-item:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  &_add-item:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  &_add-item:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  &_add-item:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  &_add-item:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  &_add-item:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
   &__required {
     font-size: 14px;
     line-height: 16px;
@@ -286,9 +362,14 @@
     &__wrapper-center--full-name {
       min-height: 260px;
       padding-top: 5px;
+      position: relative;
+    }
+    &__subtitle--full-name {
+      top: 125px;
+      left: 2px;
     }
     &__full-name {
-        margin-top: 16px;
+      margin-top: 16px;
     }
     &__full-name-item {
       width: 500px;
@@ -298,7 +379,6 @@
     &__full-name-item label {
       font-size: 19px;
       line-height: 19px;
-
     }
     &__full-name-item:first-child input {
       width: 420px;
@@ -307,43 +387,52 @@
       width: 375px;
       box-shadow: none;
       padding-left: 20px;
-      position: relative;
-    }
-    &__full-name-item input::after{
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: black;
+      box-shadow: -10px 26px 0 -11px black;
     }
     &__wrapper-center--tel-email {
       min-height: 178px;
       padding-top: 50px
     }
+    &__subtitle--tel {
+      top: 50px;
+      left: 1px;
+    }
     &__tel {
       display: block;
       margin-left: 167px;
+      margin-top: 13px;
+      margin-bottom: 50px;
+      background-color: #f1f1f1;
+    }
+    &__subtitle--green-line {
+      height: 20px;
+      top: 125px;
+      left: 2px;
     }
     &__email {
       display: block;
       margin-left: 167px;
       margin-top: 25px;
+      background-color: #f1f1f1;
     }
     &__wrapper-center--add {
       position: relative;
       min-height: 297px;
-      padding-top: 50px;
+      padding-top: 15px;
+    }
+    &__subtitle--add {
+      top: 18px;
     }
     &_add-item {
+      margin-top: 3px;
       margin-left: 167px;
-      width: 501px;
+      width: 469px;
+      height: 121px;
     }
     &__required {
       position: absolute;
       right: 0;
-      bottom: 40px;
+      bottom: 45px;
       font-size: 17px;
       line-height: 30px;
     }
@@ -355,20 +444,96 @@
     &__title {
       width: 100%;
       height: 153px;
-      padding-top: 102px;
+      padding-top: 94px;
       font-size: 53px;
       line-height: 57px;
     }
+    &__title::after {
+      width: 1182px;
+      height: 34px;
+      bottom: -20px;
+      left: 245px;
+      background-image: url(../img/zigzag-fill-desktop.png);
+      background-repeat: no-repeat;
+    }
     &__text {
+      width: 700px;
       font-size: 17px;
       line-height: 30px;
+      margin-left: 176px;
+      margin-top: 50px;
+    }
+    &__type {
+      margin-left: 9px;
+      margin-bottom: 27px;
+    }
+    &__subtitle {
+      top: 241px;
+      left: 65px;
+    }
+    &__wrapper-center--color {
+      min-height: 181px;
+    }
+    &__subtitle--color {
+      top: 28px;
+      left: 61px;
     }
     &__color {
-      width: 744px;
+      margin-left: 153px;
+      width: 860px;
+    }
+    &__subtitle--full-name {
+      top: 26px;
+      left: 62px;
+    }
+    &__full-name-item {
+      width: 800px;
+      margin-left: 178px;
+      margin-right: 0;
+    }
+    &__full-name-item label {
+      margin-right: 20px;
+    }
+    &__full-name-item:first-child input {
+      width: 625px;
+    }
+    &__full-name-item input {
+      width: 575px;
+    }
+    &__subtitle--tel {
+      top: 50px;
+      left: 63px;
+    }
+    &__tel {
+      width: 722px;
+      margin-left: 175px;
+      margin-bottom: 52px;
+    }
+    &__subtitle--green-line {
+      top: 127px;
+      left: 63px;
+    }
+    &__email {
+      width: 722px;
+      margin-left: 175px;
+    }
+    &__wrapper-center--add {
+      padding-top: 14px;
+    }
+    &__subtitle--add {
+      top: 18px;
+      left: 64px;
     }
     &_add-item {
       margin-left: 175px;
       width: 700px;
+    }
+    &_add-item {
+      width: 669px;
+    }
+    &__required {
+      left: 576px;
+      top: 202px;
     }
   }
 }
