@@ -40,35 +40,39 @@
   }
   &__catalog-item--bg1 {
     background-color: #63d1bb;
-    position: relative;
-  }
-  &__catalog-item--bg1::after {
-    content: "";
-    position: absolute;
-    left: 241px;
-    top: 20px;
-    width: 44px;
-    height: 66px;
-    background-image: url(../img/icon-interior.svg);
+    background-image: url("../img/icon-interior.svg");
     background-repeat: no-repeat;
-    background-position: 2px 0;
-    opacity: 0.3;
+    background-position: 244px 20px;
+  }
+  &__catalog-item--bg1:hover {
+    background-image: url("../img/icon-interior-hover.svg");
+    background-color: #59d5bc;
+    height: 94px;
+  }
+  &__catalog-item--bg1:active {
+    background-image: url("../img/icon-interior-active.svg");
+    background-color: #59d5bc;
+  }
+  &__catalog-item--bg1:active &__text {
+    color: rgba(255, 255, 255, 0.3);
   }
   &__catalog-item--bg2 {
     background-color: #56c3b2;
-    position: relative;
-  }
-  &__catalog-item--bg2::after {
-    content: "";
-    position: absolute;
-    left: 230px;
-    top: 20px;
-    width: 60px;
-    height: 66px;
-    background-image: url(../img/icon-toy.svg);
+    background-image: url("../img/icon-toy.svg");
     background-repeat: no-repeat;
-    background-position: 2px 0;
-    opacity: 0.3;
+    background-position: 233px 19px;
+  }
+  &__catalog-item--bg2:hover {
+    background-image: url("../img/icon-toy-hover.svg");
+    background-color: #46c1ae;
+    height: 94px;
+  }
+  &__catalog-item--bg2:active {
+    background-image: url("../img/icon-toy-active.svg");
+    background-color: #46c1ae;
+  }
+  &__catalog-item--bg2:active &__text {
+    color: rgba(255, 255, 255, 0.3);
   }
   &__text {
     width: 108px;
@@ -78,7 +82,6 @@
     font-weight: bold;
     padding-left: 30px;
   }
-
 }
 
 @media (min-width: @tablet-widths) {
@@ -86,9 +89,10 @@
     min-height: 745px;
     &__wrapper {
       height: 696px;
-      background-image: url(../img/hero-desktop.jpg);
+      background-image: url(../img/hero-tablet.jpg);
       background-repeat: no-repeat;
-      background-position: -60px 0px;
+      background-position: center 0px;
+      background-size: cover;
       position: relative;
       z-index: 0;
     }
@@ -107,22 +111,32 @@
       flex-direction: row;
     }
     &__catalog-item {
-      height: 119px;
+      height: 124px;
       padding: 0;
+    }
+    &__catalog-item--bg1 {
+      background-position: 258px 30px;
+      height: 119px;
+      margin-top: 5px;
+    }
+    &__catalog-item--bg1:hover {
+      height: 124px;
+      margin-top: 0;
+    }
+    &__catalog-item--bg2 {
+      background-position: 240px 30px;
+      height: 119px;
+      margin-top: 5px;
+    }
+    &__catalog-item--bg2:hover {
+      height: 124px;
+      margin-top: 0;
     }
     &__text {
       font-size: 20px;
       line-height: 30px;
       padding-left: 35px;
       padding-top: 7px;
-    }
-    &__catalog-item--bg1::after {
-      left: 256px;
-      top: 30px;
-    }
-    &__catalog-item--bg2::after {
-      left: 240px;
-      top: 30px;
     }
     &__wrapper::after {
       content: "";
@@ -146,6 +160,7 @@
       background-image: url(../img/hero-desktop.jpg);
       background-repeat: no-repeat;
       background-position: center 0px;
+      background-size: cover;
     }
     &__title {
       width: 625px;
@@ -155,11 +170,11 @@
     &__br {
     display: none;
     }
-    &__catalog-item--bg1::after {
-      left: 447px;
+    &__catalog-item--bg1 {
+      background-position: 448px 29px;
     }
-    &__catalog-item--bg2::after {
-      left: 429px;
+    &__catalog-item--bg2 {
+      background-position: 430px 30px;
     }
     &__wrapper::after {
       width: 1182px;
