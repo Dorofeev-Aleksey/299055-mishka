@@ -43,10 +43,40 @@
     text-decoration: none;
     background-color: white;
   }
-  &__popup-link:hover {
+  &__popup-item:nth-child(3) &__popup-link {
+    background-image: url(../img/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(3) &__popup-link:hover {
+    background-image: url(../img/icon-search-green.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(3) &__popup-link:active {
+    background-image: url(../img/icon-search-green-active.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link {
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link:hover {
+    background-image: url(../img/icon-cart-green.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link:active {
+    background-image: url(../img/icon-cart-green-active.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-link[href]:hover {
     color: rgba(0, 0, 0, 0.6);
   }
-  &__popup-link:active {
+  &__popup-link[href]:active {
     color: rgba(0, 0, 0, 0.3);
   }
   &__delivery {
@@ -92,6 +122,8 @@
     &__popup-link {
       border-bottom: 1px solid #ececec;
       padding: 27px 66px;
+      padding-left: 75px;
+      padding-right: 57px;
     }
     &__main-nav--opened + &__popup-menu {
       display: block;
@@ -161,10 +193,24 @@
       font-size: 0;
       width: 82px;
       padding-left: 0;
+      background-position: 33px 35px;
+    }
+    &__popup-item:nth-child(3) &__popup-link:hover {
+      background-position: 33px 35px;
+    }
+    &__popup-item:nth-child(3) &__popup-link:active {
+      background-position: 33px 35px;
     }
     &__popup-item:nth-child(4) &__popup-link {
       margin-right: -8px;
       padding-left: 85px;
+      background-position: 31px 35px;
+    }
+    &__popup-item:nth-child(4) &__popup-link:hover {
+      background-position: 31px 35px;
+    }
+    &__popup-item:nth-child(4) &__popup-link:active {
+      background-position: 31px 35px;
     }
     &__delivery {
       display: block;
@@ -196,16 +242,18 @@
     }
     &__popup-item-wrest1 {
       top: 0px;
-      left: -686px;
+      left: -685px;
     }
     &__popup-item-wrest1 &__popup-link {
       background-color: white;
-      padding: 32px 0;
-      padding-right: 25px;
+      padding-right: 24px;
+      padding-left: 1px;
+      padding-top: 29px;
+      padding-bottom: 35px;
       border-right: 1px solid #ececec;
       width: 160px;
       font-size: 17px;
-      margin-left: -15px;
+      margin-left: -14px;
     }
     &__popup-item-wrest2 {
       top: 0px;
