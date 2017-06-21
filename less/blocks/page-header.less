@@ -10,7 +10,7 @@
   &__toggler {
     position: absolute;
     top: 22px;
-    right: 0;
+    right: -5px;
     width: 30px;
     height: 30px;
     font-size: 0;
@@ -19,12 +19,12 @@
     background-color: white;
     margin-right: 30px;
   }
-  &__toggler--closed {
+  &__main-nav--closed &__toggler {
     background-image: url(../img/icon-menu-open.svg);
     background-repeat: no-repeat;
     background-position: 5px 10px;
   }
-  &__toggler--opened {
+  &__main-nav--opened &__toggler {
     background-image: url(../img/icon-menu-close.svg);
     background-repeat: no-repeat;
     background-position: 5px 8px;
@@ -36,7 +36,6 @@
   }
   &__popup-link {
     display: block;
-    padding: 30px 66px;
     font-size: 17px;
     line-height: 24px;
     color: black;
@@ -44,14 +43,68 @@
     text-decoration: none;
     background-color: white;
   }
+  &__popup-item:nth-child(3) &__popup-link {
+    background-image: url(../img/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(3) &__popup-link:hover {
+    background-image: url(../img/icon-search-green.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(3) &__popup-link:active {
+    background-image: url(../img/icon-search-green-active.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link {
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link:hover {
+    background-image: url(../img/icon-cart-green.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-item:nth-child(4) &__popup-link:active {
+    background-image: url(../img/icon-cart-green-active.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+  &__popup-link[href]:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__popup-link[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
   &__delivery {
     display: none;
+  }
+  &__delivery:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__delivery:active {
+    color: rgba(0, 0, 0, 0.3);
   }
   &__news {
     display: none;
   }
+  &__news:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__news:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
   &__sale {
     display: none;
+  }
+  &__sale:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__sale:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -63,8 +116,24 @@
       top: 80px;
       display: none;
     }
+    &__popup-menu {
+      width: 320px;
+    }
     &__popup-link {
       border-bottom: 1px solid #ececec;
+      padding: 27px 66px;
+      padding-left: 75px;
+      padding-right: 57px;
+    }
+    &__main-nav--opened + &__popup-menu {
+      display: block;
+    }
+    &__main-nav--nojs &__toggler {
+      display: none;
+    }
+    &__main-nav--nojs + &__popup-menu {
+      position: static;
+      display: block;
     }
   }
 }
@@ -87,44 +156,72 @@
       height: 88px;
     }
     &__popup-link {
-      padding: 32px 45px;
+      width: 188px;
+      padding: 32px 0;
+      padding-right: -5px;
+      padding-left: 77px;
       border-left: 1px solid #ececec;
     }
     &__popup-item-wrest1 {
       position: absolute;
-      top: 90px;
-      left: -315px;
+      top: 100px;
+      left: -328px;
+      z-index: 200;
     }
     &__popup-item-wrest1 &__popup-link {
       border-left: none;
       background-color: transparent;
       padding: 5px 10px;
+      font-size: 15px;
     }
     &__popup-item-wrest2 {
       position: absolute;
-      top: 90px;
-      left: -155px;
+      top: 100px;
+      left: -160px;
       background-color: transparent;
       border-left: none;
+      z-index: 201;
     }
     &__popup-item-wrest2 &__popup-link {
       border-left: none;
       background-color: transparent;
       padding: 5px 10px;
       width: 160px;
+      font-size: 15px;
     }
     &__popup-item:nth-child(3) &__popup-link {
       font-size: 0;
+      width: 82px;
+      padding-left: 0;
+      background-position: 33px 35px;
+    }
+    &__popup-item:nth-child(3) &__popup-link:hover {
+      background-position: 33px 35px;
+    }
+    &__popup-item:nth-child(3) &__popup-link:active {
+      background-position: 33px 35px;
+    }
+    &__popup-item:nth-child(4) &__popup-link {
+      margin-right: -8px;
+      padding-left: 85px;
+      background-position: 31px 35px;
+    }
+    &__popup-item:nth-child(4) &__popup-link:hover {
+      background-position: 31px 35px;
+    }
+    &__popup-item:nth-child(4) &__popup-link:active {
+      background-position: 31px 35px;
     }
     &__delivery {
       display: block;
       position: absolute;
-      bottom: -30px;
+      bottom: -40px;
       right: 0;
       font-size: 15px;
       line-height: 24px;
       color: @grey;
       text-decoration: none;
+      z-index: 200;
     }
   }
 }
@@ -132,6 +229,7 @@
 @media (min-width: @desktop-widths) {
   .page-header {
     width: 1050px;
+    z-index: 200;
     &__logo {
       margin-left: 445px;
       margin-top: 20px;
@@ -139,15 +237,23 @@
     &__main-nav {
       display: none;
     }
+    &__popup-link {
+      font-size: 17px;
+    }
     &__popup-item-wrest1 {
       top: 0px;
-      left: -686px;
+      left: -685px;
     }
     &__popup-item-wrest1 &__popup-link {
       background-color: white;
-      padding: 32px 0;
-      padding-right: 35px;
+      padding-right: 24px;
+      padding-left: 1px;
+      padding-top: 29px;
+      padding-bottom: 35px;
       border-right: 1px solid #ececec;
+      width: 160px;
+      font-size: 17px;
+      margin-left: -14px;
     }
     &__popup-item-wrest2 {
       top: 0px;
@@ -156,14 +262,18 @@
     }
     &__popup-item-wrest2 &__popup-link {
       background-color: white;
-      padding: 32px 34px;
+      padding: 32px 20px;
       width: 165px;
+      font-size: 17px;
+    }
+    &__delivery {
+      bottom: -42px;
     }
     &__news {
       display: block;
       position: absolute;
-      bottom: -40px;
-      left: 5px;
+      bottom: -42px;
+      left: 1px;
       font-size: 15px;
       line-height: 24px;
       font-weight: bold;
@@ -173,8 +283,8 @@
     &__sale {
       display: block;
       position: absolute;
-      bottom: -40px;
-      left: 200px;
+      bottom: -42px;
+      left: 220px;
       font-size: 15px;
       line-height: 24px;
       font-weight: bold;

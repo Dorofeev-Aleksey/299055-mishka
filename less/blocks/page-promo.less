@@ -1,10 +1,11 @@
 .page-promo {
   width: 100%;
   background-color: #f9f9f9;
-  min-height: 490px;
+  min-height: 489px;
   border-top: 1px solid #ececec;
   &__wrapper {
     .container();
+    width: 320px;
     height: 440px;
     display: flex;
     flex-direction: column;
@@ -12,6 +13,7 @@
     padding-top: 50px;
     background-image: url(../img/hero-mobile@1x.jpg);
     background-repeat: no-repeat;
+    background-size: 620px 440px;
     background-position: center -30px;
   }
   &__title {
@@ -22,6 +24,7 @@
     font-weight: bold;
     text-align: center;
     margin: 0 auto;
+    margin-top: 20px;
   }
   &__catalog-box {
     width: 100%;
@@ -30,41 +33,46 @@
   }
   &__catalog-item {
     width: 100%;
+    height: 89px;
     display: block;
     text-decoration: none;
     padding: 7px 0;
   }
   &__catalog-item--bg1 {
     background-color: #63d1bb;
-    position: relative;
-  }
-  &__catalog-item--bg1::after {
-    content: "";
-    position: absolute;
-    left: 200px;
-    top: 20px;
-    width: 44px;
-    height: 66px;
-    background-image: url(../img/icon-interior.svg);
+    background-image: url("../img/icon-interior.svg");
     background-repeat: no-repeat;
-    background-position: 2px 0;
-    opacity: 0.3;
+    background-position: 244px 20px;
+  }
+  &__catalog-item--bg1:hover {
+    background-image: url("../img/icon-interior-hover.svg");
+    background-color: #59d5bc;
+    height: 94px;
+  }
+  &__catalog-item--bg1:active {
+    background-image: url("../img/icon-interior-active.svg");
+    background-color: #59d5bc;
+  }
+  &__catalog-item--bg1:active &__text {
+    color: rgba(255, 255, 255, 0.3);
   }
   &__catalog-item--bg2 {
     background-color: #56c3b2;
-    position: relative;
-  }
-  &__catalog-item--bg2::after {
-    content: "";
-    position: absolute;
-    left: 185px;
-    top: 20px;
-    width: 60px;
-    height: 66px;
-    background-image: url(../img/icon-toy.svg);
+    background-image: url("../img/icon-toy.svg");
     background-repeat: no-repeat;
-    background-position: 2px 0;
-    opacity: 0.3;
+    background-position: 233px 19px;
+  }
+  &__catalog-item--bg2:hover {
+    background-image: url("../img/icon-toy-hover.svg");
+    background-color: #46c1ae;
+    height: 94px;
+  }
+  &__catalog-item--bg2:active {
+    background-image: url("../img/icon-toy-active.svg");
+    background-color: #46c1ae;
+  }
+  &__catalog-item--bg2:active &__text {
+    color: rgba(255, 255, 255, 0.3);
   }
   &__text {
     width: 108px;
@@ -74,7 +82,6 @@
     font-weight: bold;
     padding-left: 30px;
   }
-
 }
 
 @media (min-width: @tablet-widths) {
@@ -82,16 +89,19 @@
     min-height: 745px;
     &__wrapper {
       height: 696px;
-      background-image: url(../img/hero-desktop.jpg);
+      background-image: url(../img/hero-tablet.jpg);
       background-repeat: no-repeat;
-      background-position: -60px 0px;
+      background-position: center 0px;
+      background-size: cover;
+      position: relative;
+      z-index: 0;
     }
     &__title {
       width: 515px;
       font-size: 43px;
       line-height: 50px;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 105px;
     }
     &__br {
     display: none;
@@ -100,11 +110,44 @@
       display: flex;
       flex-direction: row;
     }
-    &__catalog-item--bg1::after {
-      left: 255px;
+    &__catalog-item {
+      height: 124px;
+      padding: 0;
     }
-    &__catalog-item--bg2::after {
-      left: 242px;
+    &__catalog-item--bg1 {
+      background-position: 258px 30px;
+      height: 119px;
+      margin-top: 5px;
+    }
+    &__catalog-item--bg1:hover {
+      height: 124px;
+      margin-top: 0;
+    }
+    &__catalog-item--bg2 {
+      background-position: 240px 30px;
+      height: 119px;
+      margin-top: 5px;
+    }
+    &__catalog-item--bg2:hover {
+      height: 124px;
+      margin-top: 0;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 35px;
+      padding-top: 7px;
+    }
+    &__wrapper::after {
+      content: "";
+      position: absolute;
+      width: 768px;
+      height: 24px;
+      bottom: -12px;
+      left: -50px;
+      z-index: 100;
+      background-image: url(../img/zigzag-fill-tablet.png);
+      background-repeat: no-repeat;
     }
   }
 }
@@ -117,6 +160,7 @@
       background-image: url(../img/hero-desktop.jpg);
       background-repeat: no-repeat;
       background-position: center 0px;
+      background-size: cover;
     }
     &__title {
       width: 625px;
@@ -126,11 +170,19 @@
     &__br {
     display: none;
     }
-    &__catalog-item--bg1::after {
-      left: 447px;
+    &__catalog-item--bg1 {
+      background-position: 448px 29px;
     }
-    &__catalog-item--bg2::after {
-      left: 429px;
+    &__catalog-item--bg2 {
+      background-position: 430px 30px;
+    }
+    &__wrapper::after {
+      width: 1182px;
+      height: 34px;
+      bottom: -16px;
+      left: -100px;
+      background-image: url(../img/zigzag-fill-desktop.png);
+      background-repeat: no-repeat;
     }
   }
 }

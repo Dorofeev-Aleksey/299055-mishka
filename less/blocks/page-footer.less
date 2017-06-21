@@ -22,8 +22,14 @@
     height: 30px;
     background-image: url(../img/icon-insta.svg);
     background-repeat: no-repeat;
-    top: 20px;
-    left: 75px;
+    top: 14px;
+    left: 60px;
+  }
+  &__social-link--inst:hover::after {
+    background-image: url(../img/icon-insta-green.svg);
+  }
+  &__social-link--inst:active::after {
+    background-image: url(../img/icon-insta-green-active.svg);
   }
   &__social-link--twitter::after {
     content: "";
@@ -32,8 +38,14 @@
     height: 30px;
     background-image: url(../img/icon-fb.svg);
     background-repeat: no-repeat;
-    top: 20px;
-    left: 120px;
+    top: 8px;
+    left: 113px;
+  }
+  &__social-link--twitter:hover::after {
+    background-image: url(../img/icon-fb-green.svg);
+  }
+  &__social-link--twitter:active::after {
+    background-image: url(../img/icon-fb-green-active.svg);
   }
   &__social-link--facebook::after {
     content: "";
@@ -42,8 +54,14 @@
     height: 30px;
     background-image: url(../img/icon-twitter.svg);
     background-repeat: no-repeat;
-    top: 20px;
-    left: 170px;
+    top: 12px;
+    left: 172px;
+  }
+  &__social-link--facebook:hover::after {
+    background-image: url(../img/icon-twitter-green.svg);
+  }
+  &__social-link--facebook:active::after {
+    background-image: url(../img/icon-twitter-green-active.svg);
   }
   &__subtitle {
     display: block;
@@ -53,25 +71,32 @@
     font-weight: bold;
     vertical-align: middle;
     text-align: center;
-    margin-top: 28px;
-    margin-left: -13px;
+    margin-left: -50px;
+    text-decoration: none;
   }
   &__copyright {
-    height: 80px;
+    padding-top: 28px;
+    height: 40px;
+    cursor: pointer;
+    background-image: url(../img/logo-htmlacademy.svg);
+    background-repeat: no-repeat;
+    background-position: 194px 21px;
+  }
+  &__copyright:hover {
+    background-image: url(../img/logo-htmlacademy-hover.svg)
+  }
+  &__copyright:active {
+    background-image: url(../img/logo-htmlacademy-active.svg)
+  }
+  &__copyright:hover &__subtitle {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__copyright:active &__subtitle {
+    color: rgba(0, 0, 0, 0.3);
   }
   &__logo-html {
     font-size: 0;
     position: relative;
-  }
-  &__logo-html::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 35px;
-    right: -230px;
-    top: -40px;
-    background-image: url(../img/logo-htmlacademy.png);
-    background-repeat: no-repeat;
   }
 }
 
@@ -90,16 +115,19 @@
     &__social {
       border: none;
       width: 170px;
+      margin-right: 12px;
     }
     &__copyright {
       height: 35px;
-      padding-right: 40px;
+      padding-right: 57px;
+      padding-bottom: 14px;
+      background-position: 156px 21px;
     }
     &__subtitle {
       margin: 0px;
     }
     &__logo-html::after {
-      right: -170px;
+      right: -185px;
       top: -40px;
     }
   }

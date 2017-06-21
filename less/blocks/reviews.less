@@ -1,18 +1,23 @@
 .reviews {
-  height: 600px;
+  min-height: 600px;
   .container();
+  position: relative;
   &__title {
     font-size: 25px;
     line-height: 30px;
     color: black;
     font-weight: bold;
+    margin-top: 0;
   }
   &__text {
     font-size: 15px;
     line-height: 30px;
     color: @grey;
     font-weight: normal;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+  &__br {
+    display: none;
   }
   &__button-box {
     width: 260px;
@@ -24,6 +29,7 @@
     font-size: 0;
     margin: 0;
     padding: 0;
+    margin-top: 5px;
     width: 100%;
     height: 52px;
     background-color: white;
@@ -37,11 +43,35 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+  &__button--prev:hover {
+    opacity: 0.6;
+  }
+  &__button--prev:active {
+    opacity: 0.3;
+    border: none;
+    outline: none;
+  }
+  &__button--prev:focus {
+    border: none;
+    outline: none;
+  }
   &__button--next {
     background-image: url(../img/icon-right-arrow.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-position: center center;
+  }
+  &__button--next:hover {
+    opacity: 0.6;
+  }
+  &__button--next:active {
+    opacity: 0.3;
+    border: none;
+    outline: none;
+  }
+  &__button--next:focus {
+    border: none;
+    outline: none;
   }
   &__name-writer {
     display: block;
@@ -49,6 +79,7 @@
     line-height: 24px;
     color: black;
     font-weight: bold;
+    margin-bottom: 5px;
   }
   &__email-writer {
     display: block;
@@ -56,10 +87,19 @@
     line-height: 30px;
     color: @grey;
     font-weight: normal;
-    margin-bottom: 30px;
   }
   &__next {
     margin-bottom: 25px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 8px;
+    bottom: -30px;
+    left: -30px;
+    background-image: url(../img/zigzag-line-mob.png);
+    background-repeat: no-repeat;
   }
 }
 
@@ -67,7 +107,7 @@
   .reviews {
     width: 668px;
     padding: 0 50px;
-    height: 417px;
+    min-height: 535px;
     padding-top: 40px;
     position: relative;
     background-image: url(../img/review.jpg);
@@ -78,19 +118,25 @@
       line-height: 50px;
       color: black;
       font-weight: bold;
+      margin-top: 37px;
+      margin-bottom: 50px;
     }
     &__text {
-      width: 641px;
+      width: 644px;
       font-size: 17px;
       line-height: 30px;
       color: @grey;
       font-weight: normal;
+      margin-bottom: 57px;
+    }
+    &__br {
+      display: none;
     }
     &__button-box {
       width: 167px;
       position: absolute;
-      right: 55px;
-      bottom: 40px;
+      right: 53px;
+      bottom: 110px;
     }
     &__button {
       border: none;
@@ -100,6 +146,13 @@
       line-height: 24px;
       color: black;
       font-weight: bold;
+    }
+    &::after {
+      background-image: url(../img/zigzag-line-tablet.png);
+      width: 768px;
+      height: 17px;
+      left: 0px;
+      bottom: 35px;
     }
   }
 }
@@ -111,17 +164,23 @@
     &__title {
       font-size: 53px;
       line-height: 57px;
+      margin-top: 30px;
       color: black;
       font-weight: bold;
     }
     &__text {
+      width: 770px;
       font-size: 17px;
       line-height: 30px;
       color: @grey;
       font-weight: normal;
+      margin-bottom: 38px;
+    }
+    &__br {
+      display: block;
     }
     &__name-writer {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 24px;
       color: black;
       font-weight: bold;
@@ -129,8 +188,15 @@
     &__button-box {
       width: 175px;
       position: absolute;
-      right: 5px;
-      bottom: 35px;
+      right: 0px;
+      bottom: 162px;
+    }
+    &::after {
+      background-image: url(../img/zigzag-line-desktop.png);
+      width: 1050px;
+      height: 23px;
+      left: 0px;
+      bottom: 29px;
     }
   }
 }

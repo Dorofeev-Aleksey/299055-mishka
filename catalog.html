@@ -10,8 +10,8 @@
       <div class="page-header__logo">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазина Мишка">
       </div>
-      <div class="page-header__main-nav">
-        <button class="page-header__toggler page-header__toggler--closed" type="button">Открыть меню</button>
+      <div class="page-header__main-nav page-header__main-nav--nojs page-header__main-nav--closed">
+        <button class="page-header__toggler" type="button">Открыть меню</button>
       </div>
       <nav class="page-header__popup-menu">
         <ul class="page-header__popup-list">
@@ -38,7 +38,7 @@
       <div class="page-catalog__wrapper-center">
         <article class="page-catalog__card">
           <div class="page-catalog__photo">
-            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <img src="img/photo-1-mobile@1x.jpg" width="260" height="196" alt="Зайчик-попрыгайчик">
           </div>
           <div class="page-catalog__wrapper-info">
             <span class="page-catalog__name">Зайчик-попрыгайчик</span>
@@ -115,5 +115,21 @@
       </div>
       <button class="popup-order__submit" type="submit">Отправить заказ</button>
     </form>
+        <script type="text/javascript">
+      var MainNav = document.querySelector(".page-header__main-nav");
+      var Toggler = document.querySelector(".page-header__toggler");
+
+      MainNav.classList.remove("page-header__main-nav--nojs");
+
+      Toggler.addEventListener("click", function() {
+        if (MainNav.classList.contains("page-header__main-nav--opened")) {
+          MainNav.classList.remove("page-header__main-nav--opened");
+          MainNav.classList.add("page-header__main-nav--closed");
+        } else {
+          MainNav.classList.add("page-header__main-nav--opened");
+          MainNav.classList.remove("page-header__main-nav--closed");
+        }
+      })
+    </script>
   </body>
 </html>
