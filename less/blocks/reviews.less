@@ -113,6 +113,10 @@
     background-image: url(../img/review.jpg);
     background-repeat: no-repeat;
     background-position: 0 left;
+    @media @retina {
+      background-image: url("../img/review@2x.jpg");
+      background-size: cover;
+    }
     &__title {
       font-size: 43px;
       line-height: 50px;

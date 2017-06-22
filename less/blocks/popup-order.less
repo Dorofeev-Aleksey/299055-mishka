@@ -1,6 +1,18 @@
 .popup-order {
   display: none;
+  position: fixed;
+  top: 100px;
+  left: 80px;
+  width: 320px;
+  border: 1px solid #c7c7c7;
+  box-shadow: 3px 4px 10px 0px rgba(0, 1, 1, 0.25);
+  height: 336px;
+  background-color: white;
+  z-index: 2000;
   &__title {
+    width: 150px;
+    text-align: center;
+    margin-left: 88px;
     font-size: 25px;
     line-height: 30px;
     color: black;
@@ -11,5 +23,69 @@
     line-height: 30px;
     color: @grey;
     font-weight: normal;
+    margin-left: 95px;
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__item input {
+    display: none;
+  }
+  &__item label {
+    font-size: 17px;
+    line-height: 17px;
+    padding: 12.5px 34px;
+    border: 2px solid #ececec;
+    cursor: pointer;
+  }
+  &__item input:checked + label {
+    border: 2px solid #63d1bb;
+  }
+  &__item label:hover {
+    border: 2px solid #56c3b2;
+  }
+  &__item label:active {
+    border: 2px solid #ececec;
+    background-color: #56c3b2;
+  }
+}
+
+@media (min-width: @tablet-widths) {
+  .popup-order {
+    width: 566px;
+    left: 195px;
+    top: 200px;
+    &__title {
+      font-size: 30px;
+      line-height: 57px;
+      width: 350px;
+      margin-left: 108px;
+      margin-bottom: 5px;
+    }
+    &__subtitle {
+      font-size: 17px;
+      line-height: 30px;
+      margin-left: 208px;
+    }
+    &__list {
+      margin-left: 108px;
+    }
+    &__item label {
+      padding: 12.5px 49.35px;
+    }
+  }
+  @media (min-width: @desktop-widths) {
+    .popup-order {
+      left: 550px;
+      top: 200px;
+    }
   }
 }

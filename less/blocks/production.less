@@ -23,10 +23,14 @@
     width: 260px;
     height: 150px;
     background-color: #a7d3c4;
-    background-image: url(../img/video-desktop.jpg);
+    background-image: url(../img/video-mobile@1x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 27px;
+    @media @retina {
+      background-image: url(../img/video-mobile@2x.jpg);
+      background-size: cover;
+    }
   }
   &__js-video-btn {
     width: 100px;
@@ -87,6 +91,11 @@
       width: 668px;
       height: 455px;
       margin-bottom: 15px;
+      background-image: url(../img/video-tablet@1x.jpg);
+      @media @retina {
+        background-image: url(../img/video-tablet@2x.jpg);
+        background-size: cover;
+      }
     }
     &__js-video-btn {
       margin-left: 285px;
@@ -144,6 +153,11 @@
       top: 0;
       left: 0px;
       margin-bottom: 0;
+      background-image: url(../img/video-desktop@1x.jpg);
+      @media @retina {
+        background-image: url(../img/video-desktop@2x.jpg);
+        background-size: cover;
+      }
     }
     &__js-video-btn {
       margin-left: 292px;
