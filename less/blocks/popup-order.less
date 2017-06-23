@@ -1,8 +1,9 @@
 .popup-order {
   display: none;
   position: fixed;
-  top: 100px;
-  left: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
   border: 1px solid #c7c7c7;
   box-shadow: 3px 4px 10px 0px rgba(0, 1, 1, 0.25);
@@ -62,7 +63,9 @@
   .popup-order {
     width: 566px;
     left: 195px;
-    top: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     &__title {
       font-size: 30px;
       line-height: 57px;
@@ -84,8 +87,9 @@
   }
   @media (min-width: @desktop-widths) {
     .popup-order {
-      left: 550px;
-      top: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

@@ -161,19 +161,7 @@
     margin-bottom: 36px;
     margin-top: 10px;
   }
-  &__full-name-item input::-webkit-input-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__full-name-item input::-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__full-name-item input:-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__full-name-item input:-ms-input-placeholder {
+  &__full-name-item input::placeholder {
     font-size: 17px;
     line-height: 18px;
   }
@@ -190,15 +178,14 @@
     box-shadow: -10px 26px 0 -11px #62d1ba;
     outline: none;
   }
-  /* плавное изменение прозрачности  placeholder-а при фокусе */
-  &__full-name-item input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-  &__full-name-item input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-  &__full-name-item input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-  &__full-name-item input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-  &__full-name-item input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-  &__full-name-item input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-  &__full-name-item input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-  &__full-name-item input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+  &__full-name-item input::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &__full-name-item input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
   &__tel {
     width: 282px;
     border: none;
@@ -221,31 +208,18 @@
     background-image: url("../img/icon-phone-hover.svg");
     outline: none;
   }
-  &__tel::-webkit-input-placeholder {
+  &__tel::placeholder {
     font-size: 17px;
     line-height: 18px;
   }
-  &__tel::-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
+  &__tel::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
-  &__tel:-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
+  &__tel:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
-  &__tel:-ms-input-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  /* плавное изменение прозрачности  placeholder-а при фокусе */
-  &__tel::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-  &__tel::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-  &__tel:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-  &__tel:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-  &__tel:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-  &__tel:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-  &__tel:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-  &__tel:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
   &__email {
     width: 282px;
     border: none;
@@ -255,19 +229,7 @@
     background-repeat: no-repeat;
     background-position: 224px -2px;
   }
-  &__email::-webkit-input-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__email::-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__email:-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__email:-ms-input-placeholder {
+  &__email::placeholder {
     font-size: 17px;
     line-height: 18px;
   }
@@ -284,15 +246,14 @@
     background-image: url("../img/icon-mail-hover.svg");
     outline: none;
   }
-  /* плавное изменение прозрачности  placeholder-а при фокусе */
-  &__email::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-  &__email::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-  &__email:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-  &__email:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-  &__email:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-  &__email:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-  &__email:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-  &__email:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+  &__email::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &__email:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
   &__add-item {
     width: 230px;
     height: 120px;
@@ -303,19 +264,7 @@
     border: 2px solid black;
     resize: none;
   }
-  &__add-item::-webkit-input-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__add-item::-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__add-item:-moz-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-  }
-  &__add-item:-ms-input-placeholder {
+  &__add-item:::placeholder {
     font-size: 17px;
     line-height: 18px;
   }
@@ -329,15 +278,14 @@
     border: 2px solid #62d1ba;
     outline: none;
   }
-  /* плавное изменение прозрачности  placeholder-а при фокусе */
-  &__add-item::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-  &__add-item::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-  &__add-item:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-  &__add-item:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-  &__add-item:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-  &__add-item:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-  &__add-item:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-  &__add-item:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+  &__add-item::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &__add-item:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
   &__required {
     font-size: 14px;
     line-height: 16px;
@@ -360,10 +308,10 @@
     &__title::after {
       content: "";
       position: absolute;
-      width: 768px;
+      width: 1150px;
       height: 24px;
       bottom: -14px;
-      left: 165px;
+      left: -7px;
       background-image: url(../img/zigzag-fill-tablet.png);
       background-repeat: no-repeat;
     }
@@ -475,43 +423,33 @@
       position: relative;
     }
     &__subtitle--full-name {
-      top: 125px;
+      top: 25px;
       left: 2px;
     }
     &__full-name {
       margin-top: 16px;
     }
     &__full-name-item {
-      width: 500px;
-      margin-left: 167px;
+      width: 600px;
+      margin-left: 168px;
       margin-bottom: 6px;
+      margin-right: 0;
     }
     &__full-name-item label {
       font-size: 19px;
       line-height: 19px;
     }
     &__full-name-item:first-child input {
-      width: 420px;
+      width: 433px;
     }
     &__full-name-item input{
-      width: 375px;
+      width: 382px;
       box-shadow: none;
-      padding-left: 20px;
+      margin-left: 20px;
       box-shadow: -10px 26px 0 -11px black;
+      padding-left: 15px;
     }
-    &__full-name-item input::-webkit-input-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__full-name-item input::-moz-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__full-name-item input:-moz-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__full-name-item input:-ms-input-placeholder {
+    &__full-name-item input::placeholder {
       font-size: 19px;
       line-height: 19px;
     }
@@ -532,22 +470,7 @@
       background-color: #f1f1f1;
       background-position: 450px -2px;
     }
-    &__tel::-webkit-input-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__tel::-moz-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__tel:-moz-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__tel:-ms-input-placeholder{
+    &__tel::placeholder{
       font-size: 19px;
       line-height: 19px;
       padding-left: 15px;
@@ -565,22 +488,7 @@
       background-color: #f1f1f1;
       background-position: 447px -2px;
     }
-    &__email::-webkit-input-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__email:-moz-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__email::-moz-placeholder{
-      font-size: 19px;
-      line-height: 19px;
-      padding-left: 15px;
-    }
-    &__email:-ms-input-placeholder{
+    &__email::placeholder{
       font-size: 19px;
       line-height: 19px;
       padding-left: 15px;
@@ -599,19 +507,7 @@
       width: 469px;
       height: 121px;
     }
-    &__add-item::-webkit-input-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__add-item::-moz-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__add-item:-moz-placeholder {
-      font-size: 19px;
-      line-height: 19px;
-    }
-    &__add-item:-ms-input-placeholder {
+    &__add-item::placeholder {
       font-size: 19px;
       line-height: 19px;
     }
@@ -635,10 +531,10 @@
       line-height: 57px;
     }
     &__title::after {
-      width: 1182px;
+      width: 1932px;
       height: 34px;
       bottom: -20px;
-      left: 245px;
+      left: -14px;
       background-image: url(../img/zigzag-fill-desktop.png);
       background-repeat: no-repeat;
     }
@@ -668,23 +564,29 @@
       margin-left: 153px;
       width: 860px;
     }
+    &__wrapper-center--full-name {
+      width: 1150px;
+    }
     &__subtitle--full-name {
       top: 26px;
-      left: 62px;
+      left: 112px;
     }
     &__full-name-item {
       width: 800px;
-      margin-left: 178px;
+      margin-left: 228px;
       margin-right: 0;
+    }
+    &__full-name-item input{
+      margin-left: 0;
     }
     &__full-name-item label {
       margin-right: 20px;
     }
     &__full-name-item:first-child input {
-      width: 625px;
+      width: 630px;
     }
     &__full-name-item input {
-      width: 575px;
+      width: 580px;
     }
     &__subtitle--tel {
       top: 50px;
